@@ -28,6 +28,39 @@ $(document).ready(function(){
     time: 1000
 });
 
+$('.clinet').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+new WOW().init();
+$("body").niceScroll({
+  cursorcolor: '#f00',
+  cursorwidth: '8px',
+  cursorborder: '1px solid #33C10B',
+});
+
 });
 
 function openNav() {

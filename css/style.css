@@ -7,7 +7,7 @@ body {
 .sticky {
   position: sticky;
   top: 0;
-  background-color: #41F20E;
+  background-color: #33C10B;
   height: 60px;
   padding: 0 !important;
   line-height: 60px; }
@@ -16,7 +16,7 @@ body {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   top: 0;
   left: 0;
   background-color: #fff;
@@ -37,7 +37,7 @@ body {
     display: block;
     transition: 0.3s; }
     .sidenav a:hover {
-      color: #41F20E; }
+      color: #33C10B; }
   .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -48,7 +48,7 @@ body {
 .sidenavbutton {
   padding-top: 23px;
   transition: all 1s ease;
-  z-index: 2; }
+  z-index: 4; }
   .sidenavbutton span:first-of-type {
     font-size: 25px;
     cursor: pointer;
@@ -58,7 +58,7 @@ body {
     cursor: pointer;
     color: #fff; }
     .sidenavbutton span:last-of-type .nite {
-      color: #41F20E; }
+      color: #33C10B; }
 
 header {
   position: relative;
@@ -90,7 +90,7 @@ header {
       font-size: 15px;
       letter-spacing: 3px; }
     header .container .type-element .type {
-      color: #41F20E !important; }
+      color: #33C10B !important; }
   header .center {
     position: absolute;
     bottom: -3%;
@@ -117,7 +117,7 @@ header {
   font-size: 18px;
   margin-bottom: 30px; }
   .who-us p .krep-sentece {
-    color: #41F20E;
+    color: #33C10B;
     font-size: 25px; }
 .who-us .kreptonite-image {
   margin-top: 50px; }
@@ -149,9 +149,10 @@ header {
     z-index: 1 !important;
     text-align: center;
     font-size: 45px;
+    margin-top: 10px;
     color: #fff; }
     .counter-up-section .counter-up i {
-      color: #41F20E; }
+      color: #33C10B; }
     .counter-up-section .counter-up h6 {
       font-size: 40px;
       letter-spacing: 10px; }
@@ -161,24 +162,98 @@ header {
   .services .head {
     position: relative;
     z-index: 1;
-    margin-bottom: 30px; }
+    margin-bottom: 70px; }
   .services .header-des {
     font-size: 55px;
     margin-left: 10px; }
   .services .work {
-    border: 1px solid #41F20E;
-    height: 200px;
     margin-top: 10px;
-    background-color: #41F20E; }
+    position: relative;
+    overflow: hidden; }
+    .services .work .overlay {
+      opacity: 0.6 !important;
+      border-radius: 8px;
+      position: relative;
+      transition: all 1s ease; }
+    .services .work img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px !important; }
+    .services .work .header-services {
+      position: absolute;
+      z-index: 2;
+      bottom: -30%;
+      left: 5%;
+      width: 90%;
+      border: 1px solid #fff;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      background-color: #fff;
+      font-weight: bold;
+      color: #000;
+      transition: all .8s linear; }
+      .services .work .header-services a {
+        text-decoration: none; }
+        .services .work .header-services a:hover {
+          color: #33C10B !important; }
+    .services .work:hover .header-services {
+      bottom: 1%; }
+    .services .work:hover .overlay {
+      opacity: 0 !important; }
+  .services .read-more {
+    text-align: center; }
+    .services .read-more button {
+      margin-top: 40px;
+      background-color: #33C10B;
+      border: 1px solid #33C10B;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px;
+      width: 50%;
+      height: 70px; }
+
+.our-clients {
+  padding: 90px 0px;
+  background-color: #DDD; }
+  .our-clients .head {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 70px; }
+  .our-clients .header-des {
+    font-size: 55px;
+    margin-left: 10px; }
+
+.footer {
+  background-color: #191919;
+  color: #fff;
+  padding: 60px 0; }
+  .footer .head .header {
+    font-size: 50px;
+    color: #33C10B; }
+  .footer i {
+    color: #33C10B;
+    font-size: 18px;
+    margin-right: 10px; }
+  .footer span, .footer a {
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 15px; }
+  .footer .follow ul li {
+    float: left;
+    width: 20%; }
+    .footer .follow ul li i {
+      color: #fff !important;
+      font-size: 30px; }
 
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px; }
     .sidenav a {
       font-size: 18px; } }
-@media (min-width: 768px) {
-  .services .col-md-4 {
-    padding-right: 0 !important; } }
+@media (max-width: 800px) {
+  .services .work:hover button {
+    left: 43%; } }
 @keyframes animate {
   0% {
     transform: translate(-50%, 0); }
@@ -196,7 +271,7 @@ header {
   100% {
     transform: translateY(-10px);
     filter: none; } }
-header .overlay, .counter-up-section .overlay {
+header .overlay, .counter-up-section .overlay, .services .work .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -212,19 +287,19 @@ header .center .down:before {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #41F20E;
+  background-color: #33C10B;
   left: 50%;
   top: 10px;
   transform: translate(-50%, 0);
   animation: animate 1s linear infinite; }
 
-.who-us .head .header, .counter-up-section .head .header, .services .head .header {
-  color: #41F20E;
+.who-us .head .header, .counter-up-section .head .header, .services .head .header, .our-clients .head .header {
+  color: #33C10B;
   font-weight: bold;
   font-size: 45px;
   margin-left: 10px; }
 
-.who-us .head::after, .counter-up-section .head::after, .services .head::after {
+.who-us .head::after, .counter-up-section .head::after, .services .head::after, .our-clients .head::after {
   content: "";
   position: absolute;
   width: 120px;
@@ -234,10 +309,10 @@ header .center .down:before {
 
 .who-us .paragraphs span {
   margin-bottom: 10px;
-  border: 1px solid #41F20E;
+  border: 1px solid #33C10B;
   font-size: 20px;
   letter-spacing: 5px;
-  background-color: #41F20E;
+  background-color: #33C10B;
   color: #000;
   padding: 10px;
   display: inline-block;
