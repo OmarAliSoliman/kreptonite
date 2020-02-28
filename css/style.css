@@ -16,7 +16,7 @@ body {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: #fff;
@@ -48,7 +48,7 @@ body {
 .sidenavbutton {
   padding-top: 23px;
   transition: all 1s ease;
-  z-index: 1; }
+  z-index: 2; }
   .sidenavbutton span:first-of-type {
     font-size: 25px;
     cursor: pointer;
@@ -103,85 +103,82 @@ header {
       border-radius: 25px;
       border: 2px solid #fff; }
 
-.what-we-do .header {
-  color: #41F20E;
-  font-weight: bold;
-  font-size: 20px;
+.who-us .head {
+  margin-bottom: 30px; }
+.who-us .header-des {
+  font-size: 55px;
   margin-left: 10px; }
-.what-we-do .header-des {
-  font-size: 45px;
-  margin-left: 10px; }
-.what-we-do .do .for-you {
-  height: 200px;
-  width: 50%;
-  float: left;
-  margin-top: 20px; }
-  .what-we-do .do .for-you .back {
-    position: relative;
-    width: 50%;
-    height: 150px;
-    background-image: url("../images/svgfile/blob-shape.svg");
-    background-size: cover; }
-    .what-we-do .do .for-you .back i {
-      position: absolute;
-      top: 55%;
-      left: 50%;
-      font-size: 40px;
-      transform: translate(-50%, -50%); }
-.what-we-do .pic {
-  background-image: url("../images/svgfile/undraw_code_review_l1q9.svg");
-  background-size: cover;
-  height: 300px;
-  margin-top: 80px; }
-
-.counter-up {
-  margin-top: 80px;
-  background-color: #DDD;
-  padding-top: 20px; }
-  .counter-up .header {
+.who-us .paragraphs {
+  padding: 0rem 17px 17px 17px; }
+  .who-us .paragraphs p {
+    font-size: 18px;
+    color: #555; }
+.who-us p {
+  font-size: 18px;
+  margin-bottom: 30px; }
+  .who-us p .krep-sentece {
     color: #41F20E;
-    font-weight: bold;
-    font-size: 20px;
-    margin-left: 10px; }
-  .counter-up .header-des {
+    font-size: 25px; }
+.who-us .kreptonite-image {
+  margin-top: 50px; }
+  .who-us .kreptonite-image img {
+    width: 100%;
+    border-radius: 10px;
+    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 94%, 0 100%, 0% 60%, 0 0);
+    animation: kreptoniteanimate 1s infinite; }
+
+.counter-up-section {
+  position: relative;
+  margin-top: 40px;
+  background-image: url("../images/facts.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px 0px 80px 0px; }
+  .counter-up-section .head {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 60px; }
+    .counter-up-section .head::after {
+      background-color: #fff !important; }
+  .counter-up-section .header-des {
+    font-size: 55px;
+    margin-left: 10px;
+    color: #fff !important; }
+  .counter-up-section .counter-up {
+    position: relative;
+    z-index: 1 !important;
+    text-align: center;
     font-size: 45px;
+    color: #fff; }
+    .counter-up-section .counter-up i {
+      color: #41F20E; }
+    .counter-up-section .counter-up h6 {
+      font-size: 40px;
+      letter-spacing: 10px; }
+
+.services {
+  padding: 60px 0px; }
+  .services .head {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px; }
+  .services .header-des {
+    font-size: 55px;
     margin-left: 10px; }
+  .services .work {
+    border: 1px solid #41F20E;
+    height: 200px;
+    margin-top: 10px;
+    background-color: #41F20E; }
 
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px; }
     .sidenav a {
       font-size: 18px; } }
-@media screen and (max-width: 800px) {
-  .what-we-do .header-des {
-    margin-bottom: -120px !important; }
-  .what-we-do .do .for-you {
-    margin-top: 90px !important;
-    margin-bottom: 100px !important; }
-    .what-we-do .do .for-you .back {
-      width: 100% !important;
-      height: 270px;
-      margin-top: 20px !important; }
-    .what-we-do .do .for-you i {
-      font-size: 40px !important; }
-    .what-we-do .do .for-you .description {
-      margin-right: 10px; }
-  .what-we-do .pic {
-    height: 500px !important; } }
-@media screen and (max-width: 542px) {
-  .what-we-do .do .for-you:first-child {
-    margin-top: 80px !important; }
-  .what-we-do .do .for-you {
-    width: 100% !important;
-    margin-top: 20px !important; }
-    .what-we-do .do .for-you .back {
-      width: 100% !important;
-      height: 245px !important;
-      margin-top: 20px !important; }
-    .what-we-do .do .for-you i {
-      font-size: 40px !important; }
-  .what-we-do .pic {
-    display: none; } }
+@media (min-width: 768px) {
+  .services .col-md-4 {
+    padding-right: 0 !important; } }
 @keyframes animate {
   0% {
     transform: translate(-50%, 0); }
@@ -189,7 +186,17 @@ header {
     transform: translate(-50%, 60px); }
   100% {
     transform: translate(-50%, 100px); } }
-header .overlay {
+@keyframes kreptoniteanimate {
+  0% {
+    transform: translateY(-10px);
+    filter: grayscale(100%); }
+  50% {
+    transform: translateY(-30px);
+    filter: grayscale(90%); }
+  100% {
+    transform: translateY(-10px);
+    filter: none; } }
+header .overlay, .counter-up-section .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -210,5 +217,30 @@ header .center .down:before {
   top: 10px;
   transform: translate(-50%, 0);
   animation: animate 1s linear infinite; }
+
+.who-us .head .header, .counter-up-section .head .header, .services .head .header {
+  color: #41F20E;
+  font-weight: bold;
+  font-size: 45px;
+  margin-left: 10px; }
+
+.who-us .head::after, .counter-up-section .head::after, .services .head::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 5px;
+  background-color: #000;
+  margin-left: 10px; }
+
+.who-us .paragraphs span {
+  margin-bottom: 10px;
+  border: 1px solid #41F20E;
+  font-size: 20px;
+  letter-spacing: 5px;
+  background-color: #41F20E;
+  color: #000;
+  padding: 10px;
+  display: inline-block;
+  margin-left: -15.5px !important; }
 
 /*# sourceMappingURL=style.css.map */

@@ -26,7 +26,7 @@ body{
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: $thirdColor;
@@ -63,7 +63,7 @@ body{
 .sidenavbutton{
   padding-top: 23px;
   transition: all 1s ease;
-  z-index: 1;
+  z-index: 2;
   span:first-of-type{
     font-size:25px;
     cursor:pointer;
@@ -150,72 +150,125 @@ header {
 // end videobacground
 
 // start what we do
-.what-we-do{
-  .header{
-    color: $mainColor;
-    font-weight: bold;
-    font-size: 20px;
-    margin-left: 10px;
-  }
-  .header-des{
-    font-size: 45px;
-    margin-left: 10px;
-  }
-  .do{
-    // padding: 15px !important;
-    // height: 300px;
-    .for-you{
-      height: 200px;
-      width: 50%;
-      float: left;
-      margin-top: 20px;
-      .back{
-        position: relative;
-        width: 50%;
-        height: 150px;
-        background-image: url("../images/svgfile/blob-shape.svg");
-        background-size: cover;
-        i{
-          position: absolute;
-          top: 55%;
-          left: 50%;
-          font-size: 40px;
-          transform: translate(-50%, -50%);
-        }
-      }
+.who-us{
+  .head{
+    margin-bottom: 30px;
+    .header{
+      @extend %headersections;
+    }
+    &::after{
+      @extend %aftersectionheader;
     }
   }
-  .pic{
-    background-image: url("../images/svgfile/undraw_code_review_l1q9.svg");
-    background-size: cover;
-    height: 300px;
-    margin-top: 80px;
+  .header-des{
+    font-size: 55px;
+    margin-left: 10px;
+  }
+  .paragraphs{
+    padding: 0rem 17px 17px 17px;
+    span{
+     @extend %headerOfSections;
+    }
+    p{
+      font-size: 18px;
+      color: #555;
+    }
+  }
+  p{
+    font-size: 18px;
+    margin-bottom: 30px;
+    .krep-sentece{
+      color: $mainColor;
+      font-size: 25px;
+    }
+  }
+  .kreptonite-image{
+    margin-top: 50px;
+    img{
+      width: 100%;
+      border-radius: 10px; 
+      clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 94%, 0 100%, 0% 60%, 0 0);
+      animation: kreptoniteanimate 1s infinite;
+    }
   }
 }
 
 // end what we do
 
 // Counter up
-.counter-up{
-  margin-top: 80px;
-  background-color: #DDD;
-  padding-top: 20px;
-  .header{
-    color: $mainColor;
-    font-weight: bold;
-    font-size: 20px;
-    margin-left: 10px;
+.counter-up-section{
+  position: relative;
+  margin-top: 40px;
+  background-image: url("../images/facts.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px 0px 80px 0px;
+  .overlay{
+    @extend %overlay;
+  }
+  .head{
+    position: relative;
+    z-index: 1;
+    margin-bottom: 60px;
+    .header{
+      @extend %headersections;
+    }
+    &::after{
+      @extend %aftersectionheader;
+      background-color: $thirdColor !important;
+    }
   }
   .header-des{
-    // font-weight: bold;
-    font-size: 45px;
+    font-size: 55px;
     margin-left: 10px;
+    color: $thirdColor !important;
+  }
+  .counter-up{
+    position: relative;
+    z-index: 1 !important;
+    text-align: center;
+    font-size: 45px;
+    color: $thirdColor;
+    i{
+      color: $mainColor;
+    }
+    h6{
+      font-size: 40px;
+      letter-spacing: 10px;
+    }
   }
 }
 
 
+// start our servises
+.services{
+  padding: 60px 0px;
+  .head{
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    .header{
+      @extend %headersections;
+    }
+    &::after{
+      @extend %aftersectionheader;
+    }
+  }
+  .header-des{
+    font-size: 55px;
+    margin-left: 10px;
+  }
+  .work{
+    border: 1px solid $mainColor;
+    height: 200px;
+    margin-top: 10px;
+    background-color: $mainColor;
+  }
+}
+
 
 // start media query
+
 
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -226,58 +279,15 @@ header {
   }
 }
 
-@media screen and (max-width: 800px){
-  .what-we-do{
-    .header-des{
-      margin-bottom: -120px !important ;
-    }
-    .do{
-      .for-you{
-        margin-top: 90px !important;
-        margin-bottom: 100px !important;
-        .back{
-          width: 100% !important;
-          height: 270px;
-          margin-top: 20px !important;
-        }
-        i{
-          font-size: 40px !important;
-        }
-        .description{
-          margin-right: 10px;
-        }
-      }
-    }
-    .pic{
-      height:500px !important;
+@media(min-width: 768px){
+  .services{
+    .col-md-4{
+      padding-right: 0 !important;
     }
   }
 }
 
-@media screen and (max-width: 542px){
-  .what-we-do{
-    .do{
-      .for-you:first-child{
-        margin-top: 80px !important;
-      }
-      .for-you{
-        width: 100% !important;
-        margin-top: 20px !important;
-        .back{
-          width: 100% !important;
-          height: 245px !important;
-          margin-top: 20px !important;
-        }
-        i{
-          font-size: 40px !important;
-        }
-      }
-    }
-    .pic{
-      display: none;
-    }
-  }
-}
+
 
 // start animation
 
@@ -290,6 +300,21 @@ header {
   }
   100%{
     transform: translate(-50%, 100px);
+  }
+}
+
+@keyframes kreptoniteanimate{
+  0%{
+    transform: translateY(-10px);
+    filter: grayscale(100%);
+  }
+  50%{
+    transform: translateY(-30px);
+    filter: grayscale(90%);
+  }
+  100%{
+    transform: translateY(-10px);
+    filter: none;
   }
 }
 
@@ -317,4 +342,32 @@ header {
   top: 10px;
   transform: translate(-50%, 0);
   animation: animate 1s linear infinite;
+}
+
+%headersections{
+  color: $mainColor;
+  font-weight: bold;
+  font-size: 45px;
+  margin-left: 10px;
+}
+
+%aftersectionheader{
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 5px;
+  background-color: #000;
+  margin-left: 10px;
+}
+
+%headerOfSections{
+  margin-bottom: 10px;
+  border: 1px solid $mainColor;
+  font-size: 20px;
+  letter-spacing: 5px;
+  background-color: $mainColor;
+  color: $secondColor;
+  padding: 10px;
+  display: inline-block;
+  margin-left: -15.5px !important;
 }
