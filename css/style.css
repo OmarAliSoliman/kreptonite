@@ -167,14 +167,11 @@ header {
     font-size: 55px;
     margin-left: 10px; }
   .services .work {
-    margin-top: 10px;
+    margin-top: 20px;
     position: relative;
-    overflow: hidden; }
-    .services .work .overlay {
-      opacity: 0.6 !important;
-      border-radius: 8px;
-      position: relative;
-      transition: all 1s ease; }
+    overflow: hidden;
+    height: 350px;
+    border: 1px solid #DDD; }
     .services .work img {
       width: 100%;
       height: 100%;
@@ -185,16 +182,16 @@ header {
       bottom: -30%;
       left: 5%;
       width: 90%;
-      border: 1px solid #fff;
+      border: 1px solid #000;
       padding: 20px;
       border-radius: 5px;
       font-size: 18px;
-      background-color: #fff;
+      background-color: #000;
       font-weight: bold;
-      color: #000;
       transition: all .8s linear; }
       .services .work .header-services a {
-        text-decoration: none; }
+        text-decoration: none;
+        color: #fff; }
         .services .work .header-services a:hover {
           color: #33C10B !important; }
     .services .work:hover .header-services {
@@ -271,7 +268,7 @@ header {
   100% {
     transform: translateY(-10px);
     filter: none; } }
-header .overlay, .counter-up-section .overlay, .services .work .overlay {
+header .overlay, .counter-up-section .overlay {
   position: absolute;
   top: 0;
   left: 0;

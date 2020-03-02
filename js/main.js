@@ -36,7 +36,7 @@ $('.clinet').slick({
     {
       breakpoint: 768,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
         centerPadding: '40px',
         slidesToShow: 3
@@ -56,7 +56,7 @@ $('.clinet').slick({
 
 new WOW().init();
 $("body").niceScroll({
-  cursorcolor: '#f00',
+  cursorcolor: '#33C10B',
   cursorwidth: '8px',
   cursorborder: '1px solid #33C10B',
 });
