@@ -7,7 +7,8 @@ body {
 .sticky {
   position: sticky;
   top: 0;
-  background-color: #33C10B;
+  background-color: #191919;
+  opacity: 0.9;
   height: 60px;
   padding: 0 !important;
   line-height: 60px; }
@@ -170,34 +171,37 @@ header {
     margin-top: 20px;
     position: relative;
     overflow: hidden;
-    height: 350px;
     border: 1px solid #DDD; }
     .services .work img {
       width: 100%;
       height: 100%;
-      border-radius: 8px !important; }
+      border-radius: 8px !important;
+      filter: grayscale(60%);
+      transition: all .5s ease; }
     .services .work .header-services {
       position: absolute;
       z-index: 2;
       bottom: -30%;
       left: 5%;
       width: 90%;
-      border: 1px solid #000;
+      border: 1px solid #fff;
       padding: 20px;
       border-radius: 5px;
       font-size: 18px;
-      background-color: #000;
+      background-color: #fff;
       font-weight: bold;
-      transition: all .8s linear; }
+      transition: all .5s linear; }
       .services .work .header-services a {
         text-decoration: none;
-        color: #fff; }
+        color: #000; }
         .services .work .header-services a:hover {
           color: #33C10B !important; }
     .services .work:hover .header-services {
       bottom: 1%; }
     .services .work:hover .overlay {
       opacity: 0 !important; }
+    .services .work:hover img {
+      filter: none; }
   .services .read-more {
     text-align: center; }
     .services .read-more button {
@@ -220,6 +224,10 @@ header {
   .our-clients .header-des {
     font-size: 55px;
     margin-left: 10px; }
+  .our-clients .clinet div {
+    outline: 0 !important; }
+  .our-clients .clinet img {
+    margin-bottom: 40px; }
 
 .footer {
   background-color: #191919;
@@ -243,14 +251,94 @@ header {
       color: #fff !important;
       font-size: 30px; }
 
+.about-header {
+  background-image: url("../images/about/about.jpg");
+  background-size: cover;
+  height: 60vh;
+  background-position: center; }
+  .about-header .overlay {
+    opacity: 0.6 !important; }
+
+.about-kreptonite-img {
+  position: relative;
+  top: 75%;
+  left: 50%;
+  background-image: url("../images/who/who.png");
+  background-size: cover;
+  border: 4px solid #33C10B;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  transform: translate(-50%, -75%);
+  animation: aboutImage 1s linear infinite; }
+
+.about {
+  margin-top: -140px; }
+  .about .line {
+    border-left: 2px solid #000; }
+    .about .line > div {
+      margin-left: 10px;
+      position: relative; }
+      .about .line > div span {
+        color: #33C10B;
+        font-size: 25px;
+        padding-left: 10px; }
+        .about .line > div span::before {
+          content: "\f058";
+          font-family: "Font Awesome 5 Free";
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          border-radius: 50%;
+          color: #000;
+          background-color: #fff;
+          position: absolute;
+          left: -4.5%; }
+  .about img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px; }
+
+.kreptonite-video {
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 70px;
+  background-image: url("../images/about/video.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 400px; }
+  .kreptonite-video .overlay {
+    opacity: 0.6 !important; }
+  .kreptonite-video button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #33C10B; }
+    .kreptonite-video button:focus {
+      outline: 0 !important; }
+    .kreptonite-video button i {
+      font-size: 35px;
+      color: #fff; }
+
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px; }
     .sidenav a {
       font-size: 18px; } }
-@media (max-width: 800px) {
-  .services .work:hover button {
-    left: 43%; } }
+@media (max-width: 450px) {
+  .about-header h6 {
+    font-size: 57px !important; }
+
+  .about .line > div span::before {
+    left: -10.5%; } }
+@media screen and (max-width: 800px) {
+  .counter-up-section .counter-up h6 {
+    font-size: 20px; } }
 @keyframes animate {
   0% {
     transform: translate(-50%, 0); }
@@ -268,7 +356,18 @@ header {
   100% {
     transform: translateY(-10px);
     filter: none; } }
-header .overlay, .counter-up-section .overlay {
+@keyframes aboutImage {
+  0% {
+    border: 4px solid #33C10B; }
+  25% {
+    border-top: 4px solid #fff; }
+  50% {
+    border-right: 4px solid #fff; }
+  75% {
+    border-bottom: 4px solid #fff; }
+  100% {
+    border-left: 4px solid #fff; } }
+header .overlay, .counter-up-section .overlay, .about-header .overlay, .kreptonite-video .overlay {
   position: absolute;
   top: 0;
   left: 0;

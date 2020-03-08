@@ -4,8 +4,8 @@ $(document).ready(function(){
   $(window).scroll(function(){
     if($(this).scrollTop() > 100){
       $(".sidenavbutton").addClass("sticky");
-      $(".color-nav-scroll").css("color","#000");
-      $(".nite").css("color","#000");
+      $(".color-nav-scroll").css("color","#fff");
+      $(".nite").css("color","#fff");
     }else{
       $(".sidenavbutton").removeClass("sticky");
       $(".side-icon, .krep").css("color","#fff");
@@ -13,38 +13,38 @@ $(document).ready(function(){
     }
   })
 
-  var typed = new Typed('.type', {
-    strings: [ 
-      " Digital",
-      "Creative"
-    ],
-    typeSpeed: 100,
-    backSpeed: 80,
-    loop: true
-  });
-
   $('.counter').counterUp({
     delay: 10,
     time: 1000
 });
 
 $('.clinet').slick({
+  autoplay: true,
+  autoplaySpeed: 1000,
+  cssEase: 'linear',
+  dots: true,
   centerMode: true,
   centerPadding: '60px',
   slidesToShow: 3,
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 810,
       settings: {
-        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        cssEase: 'linear',
+        arrows: false,
         centerMode: true,
         centerPadding: '40px',
-        slidesToShow: 3
+        slidesToShow: 2,
       }
     },
     {
       breakpoint: 480,
       settings: {
+        autoplay: true,
+        autoplaySpeed: 1000,
+        cssEase: 'linear',
         arrows: false,
         centerMode: true,
         centerPadding: '40px',
@@ -60,6 +60,10 @@ $("body").niceScroll({
   cursorwidth: '8px',
   cursorborder: '1px solid #33C10B',
 });
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
 
 });
 
